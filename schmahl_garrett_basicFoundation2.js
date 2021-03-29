@@ -265,8 +265,8 @@ tsa2 = tsa.slice()
 console.log("problem 14:")
 console.log("confirm og:")
 console.log(tsa2)
-console.log("scale "+scaleVal)
 let scaleVal=3
+console.log("scale "+scaleVal)
 console.log(scaleArray(tsa2, scaleVal))
 tsa2 = tsa.slice()
 scaleVal=5
