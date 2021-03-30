@@ -13,7 +13,7 @@ console.log(count255()) //confirm
 // 2. Get even 1000
 function sumEven(x){
   let sum=0
-  for(let i = 1; i<=x; i++){
+  for(let i=1; i<=x; i++){
     if (i%2 === 0){
       sum+=i
     }

@@ -134,7 +134,7 @@ console.log(incrementOddIndex(tsa2))
 let wordArray=["hello", "dojo", "awesome", "carry on", "punctuation!"]
 
 function previousStringLength(x){
-  for(i=x.length; i > 0; i--){
+  for(i=x.length; i>0; i--){
     x[i]=x[i-1].length
   }
   return x
@@ -212,14 +212,14 @@ let foodArray = ["food", 1, 2, 4, "automobile", false, "food"]
 let foodArray2= ["notFood", "tickle me elmo", 3, 4, 5, "desk"]
 
 function eatFood(x){
-  let check = 0
+  let hunger = true
   for (let i=0; i < x.length; i++){
     if(x[i] === "food"){
       console.log("yummy")
-      check = 1
+      hunger = false
     }
   }
-  if (check != 1){
+  if(hunger){
     console.log("I'm hungry")
   }
 }
@@ -233,21 +233,21 @@ eatFood(foodArray2)
 // 13. Swap Toward the Center
 //Given an array, swap the first and last values, third and third-to-last values, etc.  Example: swapTowardCenter([true,42,"Ada",2,"pizza"]) turns the array into ["pizza", 42, "Ada", 2, true].  swapTowardCenter([1,2,3,4,5,6]) turns the array into [6,2,4,3,5,1].  No need to return the array this time.
 
-//seriously wtf who did this one and 12? Assuming that we need to preserve both arrays for sanity.
-
 function createReversedArray(x){
-  let swapArray = []
-  for(i=0; i<x.length; i++){
-    swapArray[i] = x[x.length-(i+1)]
+  for(i=0; i<math.floor(x.length/2); i++){ //flooring is a good habit for future not nice languages, per Ed
+    if(i%2 === 0){
+      let temp = x[i]
+      x[i] = x[x.length-(i+1)]
+      x[x.length-(i+1)] = temp
+    }
   }
-return swapArray
+return x
 }
 
 tsa2 = tsa.slice()
 console.log("problem 13:")
 console.log(tsa2)
 console.log(createReversedArray(tsa2))
-console.log(tsa2) //confirming og integrity
 
 // 14. Scale the Array
 // Given an array arr and a number num, multiply all values in the array arr by the number num, and return the changed array arr.  For example, scaleArray([1,2,3], 3) should return [3,6,9].
