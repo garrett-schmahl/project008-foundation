@@ -46,8 +46,8 @@ console.log(sumArray(timeSaver)) //confirm
 
 // 5. Find Max
 function arrayFindMax(x){
-  let max=0
-  for(let i = 0; i<x.length; i++){
+  let max=x[0]
+  for(let i = 1; i<x.length; i++){
     if (max < x[i]){
       max = x[i]
     }

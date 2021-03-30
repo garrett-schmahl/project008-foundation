@@ -1,7 +1,5 @@
 // Basic Foundation 2
 
-
-
 console.log("Basic Foundation 2")
 
 let tsa = [1,3,5,7,10,12,14,16,0, -1, -3, -5, -6, -8, -10]
