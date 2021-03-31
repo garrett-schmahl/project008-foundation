@@ -111,7 +111,7 @@ console.log(secondLargest([1,2]))
 
 function doubleTrouble(x){
   for( let i = 0; i < x.length; i++){
-    var temp = arr[i]
+    var temp = x[i]
     x.splice(i, 0, temp)
     i++
   }
