@@ -80,7 +80,6 @@ function nToLast(x,n){
   }
 }
 console.log("problem 5:")
-console.log(tsaMaster)
 console.log(nToLast(tsaMaster, 3))
 console.log(nToLast([1,2,3],4))
 console.log(nToLast([1,2],2))
@@ -119,6 +118,4 @@ function doubleTrouble(x){
 }
 let tsa2 = tsaMaster.slice()
 console.log("problem 7:")
-console.log("og")
-console.log(tsa2)
 console.log(doubleTrouble(tsa2))
